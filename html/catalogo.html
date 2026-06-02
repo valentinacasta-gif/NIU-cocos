@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NIU — Handcrafted Coconut Bags</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="catalogo.css" />
+</head>
+<body>
+
+  <!-- CUSTOM CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ══ NAV ══ -->
+  <nav id="nav">
+    <a href="#" class="nav-logo">
+      <div class="nav-logo-icon">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="16" cy="19" rx="10" ry="11" fill="#c4956a"/>
+          <ellipse cx="16" cy="19" rx="10" ry="11" fill="url(#ng1)"/>
+          <path d="M9 13 Q12 8 16 7 Q20 8 23 13" stroke="rgba(60,30,10,.3)" stroke-width="1" fill="none"/>
+          <path d="M7 18 Q11 16 16 17 Q21 16 25 18" stroke="rgba(60,30,10,.2)" stroke-width="1" fill="none"/>
+          <ellipse cx="16" cy="8" rx="5" ry="3" fill="#5a8c3c"/>
+          <path d="M16 8 Q22 3 28 6" stroke="#4a7830" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <path d="M16 8 Q10 2 5 5" stroke="#4a7830" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <defs>
+            <radialGradient id="ng1" cx="35%" cy="35%" r="60%">
+              <stop offset="0%" stop-color="rgba(255,200,140,.4)"/>
+              <stop offset="100%" stop-color="rgba(60,30,10,.25)"/>
+            </radialGradient>
+          </defs>
+        </svg>
+      </div>
+      <div>
+        <div class="nav-logo-text">N<em>I</em>U</div>
+      </div>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#product">Colección</a></li>
+      <li><a href="#story">Nuestra Historia</a></li>
+      <li><a href="#craftsmanship">Artesanía</a></li>
+    </ul>
+
+    <div class="nav-icons">
+      <button class="nav-icon-btn" aria-label="Mi cuenta">
+        <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </button>
+      <button class="nav-icon-btn" aria-label="Comunidad">
+        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+      </button>
+      <div class="nav-divider"></div>
+      <button class="nav-icon-btn" aria-label="Carrito" id="navCart">
+        <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        <span class="badge" style="display:none"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ══ HERO ══ -->
+  <section class="hero">
+    <div class="hero-text">
+      <p class="hero-eyebrow">Hecho a mano en CR · Edición Limitada</p>
+      <h1 class="hero-title">
+        El arte<br>del<br><em>coco.</em>
+      </h1>
+      <p class="hero-desc">
+        Cada bolso NIU nace de un coco seleccionado a mano. Naturaleza, diseño y alma Tica fusionados en una sola pieza irrepetible.
+      </p>
+      <div class="hero-actions">
+        <a href="#product" class="btn-primary">
+          Descubrir
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#story" class="btn-secondary">Nuestra historia</a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-bg-text">NIU</div>
+      <div class="bag-container">
+        <svg class="bag-svg" viewBox="0 0 340 420" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="coconutGrad" cx="38%" cy="35%" r="65%">
+              <stop offset="0%" stop-color="#c4956a"/>
+              <stop offset="40%" stop-color="#8b5e3c"/>
+              <stop offset="100%" stop-color="#4a2f1a"/>
+            </radialGradient>
+            <radialGradient id="shellSheen" cx="30%" cy="25%" r="50%">
+              <stop offset="0%" stop-color="rgba(255,220,170,.35)"/>
+              <stop offset="100%" stop-color="rgba(255,220,170,0)"/>
+            </radialGradient>
+            <filter id="softShadow">
+              <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#3d2b1f" flood-opacity=".35"/>
+            </filter>
+            <linearGradient id="chainGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#d4a574"/>
+              <stop offset="50%" stop-color="#8b5e3c"/>
+              <stop offset="100%" stop-color="#d4a574"/>
+            </linearGradient>
+          </defs>
+          <!-- Chain handle -->
+          <g opacity=".9">
+            <path d="M108 58 Q100 30 112 12 Q120 0 135 5" stroke="url(#chainGrad)" stroke-width="4" fill="none" stroke-linecap="round"/>
+            <path d="M232 58 Q240 30 228 12 Q220 0 205 5" stroke="url(#chainGrad)" stroke-width="4" fill="none" stroke-linecap="round"/>
+            <ellipse cx="108" cy="42" rx="5" ry="7" fill="none" stroke="#c4956a" stroke-width="2.5" transform="rotate(-10,108,42)"/>
+            <ellipse cx="111" cy="28" rx="5" ry="7" fill="none" stroke="#a07040" stroke-width="2.5" transform="rotate(10,111,28)"/>
+            <ellipse cx="119" cy="16" rx="5" ry="7" fill="none" stroke="#c4956a" stroke-width="2.5" transform="rotate(30,119,16)"/>
+            <ellipse cx="232" cy="42" rx="5" ry="7" fill="none" stroke="#c4956a" stroke-width="2.5" transform="rotate(10,232,42)"/>
+            <ellipse cx="229" cy="28" rx="5" ry="7" fill="none" stroke="#a07040" stroke-width="2.5" transform="rotate(-10,229,28)"/>
+            <ellipse cx="221" cy="16" rx="5" ry="7" fill="none" stroke="#c4956a" stroke-width="2.5" transform="rotate(-30,221,16)"/>
+            <path d="M135 5 Q170 -10 205 5" stroke="#c4956a" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+          </g>
+          <!-- Bag body -->
+          <ellipse cx="170" cy="250" rx="128" ry="148" fill="url(#coconutGrad)" filter="url(#softShadow)"/>
+          <!-- Texture lines -->
+          <path d="M60 200 Q120 190 180 195 Q240 200 280 210" stroke="rgba(60,30,10,.18)" stroke-width="1.5" fill="none"/>
+          <path d="M50 230 Q115 218 175 224 Q235 230 290 240" stroke="rgba(60,30,10,.14)" stroke-width="1.5" fill="none"/>
+          <path d="M55 260 Q118 248 178 253 Q238 258 285 268" stroke="rgba(60,30,10,.12)" stroke-width="1.5" fill="none"/>
+          <path d="M65 290 Q122 280 180 284 Q238 288 278 296" stroke="rgba(60,30,10,.1)" stroke-width="1.5" fill="none"/>
+          <path d="M80 316 Q128 308 180 311 Q232 314 268 320" stroke="rgba(60,30,10,.08)" stroke-width="1.5" fill="none"/>
+          <path d="M130 110 Q120 200 118 330 Q120 370 130 390" stroke="rgba(60,30,10,.09)" stroke-width="1" fill="none"/>
+          <path d="M190 104 Q200 200 202 335 Q200 372 192 394" stroke="rgba(60,30,10,.07)" stroke-width="1" fill="none"/>
+          <!-- Sheen -->
+          <ellipse cx="170" cy="250" rx="128" ry="148" fill="url(#shellSheen)"/>
+          <!-- Bottom shadow -->
+          <ellipse cx="170" cy="360" rx="100" ry="50" fill="rgba(40,20,8,.25)"/>
+          <!-- Clasp -->
+          <ellipse cx="170" cy="102" rx="28" ry="10" fill="#c4956a" stroke="#8b5e3c" stroke-width="2"/>
+          <ellipse cx="170" cy="100" rx="22" ry="7" fill="#d4a574"/>
+          <rect x="148" y="92" width="44" height="16" rx="8" fill="#e8c8a0" stroke="#a07040" stroke-width="1.5"/>
+          <text x="170" y="104" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="9" fill="#5a3520" letter-spacing="3" font-weight="400">NIU</text>
+          <ellipse cx="170" cy="102" rx="6" ry="3" fill="#8b5e3c"/>
+          <ellipse cx="170" cy="101" rx="4" ry="2" fill="#d4a574"/>
+          <!-- Attachment rings -->
+          <ellipse cx="108" cy="108" rx="10" ry="7" fill="none" stroke="#c4956a" stroke-width="3"/>
+          <ellipse cx="108" cy="107" rx="7" ry="4.5" fill="#d4a574"/>
+          <ellipse cx="232" cy="108" rx="10" ry="7" fill="none" stroke="#c4956a" stroke-width="3"/>
+          <ellipse cx="232" cy="107" rx="7" ry="4.5" fill="#d4a574"/>
+        </svg>
+        <div class="bag-tag">
+          <div class="price-label">Desde</div>
+          <div class="price">7.000 ₡</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ MARQUEE ══ -->
+  <div class="marquee-section">
+    <div class="marquee-track">
+      <div class="marquee-item"><span>Hecho a Mano</span><span class="marquee-dot"></span></div>
+      <div class="marquee-item"><span>Coco Natural</span><span class="marquee-dot"></span></div>
+      <div class="marquee-item"><span>Edición Limitada</span><span class="marquee-dot"></span></div>
+      <div class="marquee-item"><span>Artesanía Tica</span><span class="marquee-dot"></span></div>
+      <div class="marquee-item"><span>100% Sostenible</span><span class="marquee-dot"></span></div>
+      <div class="marquee-item"><span>Pieza Única</span><span class="marquee-dot"></span></div>
+      <div class="marquee-item"><span>Hecho a Mano</span><span class="marquee-dot"></span></div>
+      <div class="marquee-item"><span>Coco Natural</span><span class="marquee-dot"></span></div>
+      <div class="marquee-item"><span>Edición Limitada</span><span class="marquee-dot"></span></div>
+      <div class="marquee-item"><span>Artesanía Tica</span><span class="marquee-dot"></span></div>
+      <div class="marquee-item"><span>100% Sostenible</span><span class="marquee-dot"></span></div>
+      <div class="marquee-item"><span>Pieza Única</span><span class="marquee-dot"></span></div>
+    </div>
+  </div>
+
+  <!-- ══ PRODUCTO ══ -->
+  <section class="product-section" id="product">
+    <p class="section-label reveal">El Producto</p>
+    <h2 class="section-title reveal">La <em>Bolso NIU</em></h2>
+
+    <div class="product-grid reveal">
+      <!-- Galería -->
+      <div class="product-gallery">
+        <div class="gallery-main" id="mainView">
+          <svg viewBox="0 0 340 420" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="cg2" cx="38%" cy="35%" r="65%">
+                <stop offset="0%" stop-color="#c4956a"/>
+                <stop offset="40%" stop-color="#8b5e3c"/>
+                <stop offset="100%" stop-color="#4a2f1a"/>
+              </radialGradient>
+              <radialGradient id="cs2" cx="30%" cy="25%" r="50%">
+                <stop offset="0%" stop-color="rgba(255,220,170,.35)"/>
+                <stop offset="100%" stop-color="rgba(255,220,170,0)"/>
+              </radialGradient>
+              <filter id="ss2"><feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#3d2b1f" flood-opacity=".3"/></filter>
+              <linearGradient id="cng2" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#d4a574"/>
+                <stop offset="50%" stop-color="#8b5e3c"/>
+                <stop offset="100%" stop-color="#d4a574"/>
+              </linearGradient>
+            </defs>
+            <g opacity=".85">
+              <path d="M108 58 Q100 30 112 12 Q120 0 135 5" stroke="url(#cng2)" stroke-width="4" fill="none" stroke-linecap="round"/>
+              <path d="M232 58 Q240 30 228 12 Q220 0 205 5" stroke="url(#cng2)" stroke-width="4" fill="none" stroke-linecap="round"/>
+              <ellipse cx="108" cy="42" rx="5" ry="7" fill="none" stroke="#c4956a" stroke-width="2.5" transform="rotate(-10,108,42)"/>
+              <ellipse cx="111" cy="28" rx="5" ry="7" fill="none" stroke="#a07040" stroke-width="2.5" transform="rotate(10,111,28)"/>
+              <ellipse cx="119" cy="16" rx="5" ry="7" fill="none" stroke="#c4956a" stroke-width="2.5" transform="rotate(30,119,16)"/>
+              <ellipse cx="232" cy="42" rx="5" ry="7" fill="none" stroke="#c4956a" stroke-width="2.5" transform="rotate(10,232,42)"/>
+              <ellipse cx="229" cy="28" rx="5" ry="7" fill="none" stroke="#a07040" stroke-width="2.5" transform="rotate(-10,229,28)"/>
+              <ellipse cx="221" cy="16" rx="5" ry="7" fill="none" stroke="#c4956a" stroke-width="2.5" transform="rotate(-30,221,16)"/>
+              <path d="M135 5 Q170 -10 205 5" stroke="#c4956a" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+            </g>
+            <ellipse cx="170" cy="250" rx="128" ry="148" fill="url(#cg2)" filter="url(#ss2)"/>
+            <path d="M60 200 Q120 190 180 195 Q240 200 280 210" stroke="rgba(60,30,10,.18)" stroke-width="1.5" fill="none"/>
+            <path d="M50 230 Q115 218 175 224 Q235 230 290 240" stroke="rgba(60,30,10,.14)" stroke-width="1.5" fill="none"/>
+            <path d="M55 260 Q118 248 178 253 Q238 258 285 268" stroke="rgba(60,30,10,.12)" stroke-width="1.5" fill="none"/>
+            <path d="M65 290 Q122 280 180 284 Q238 288 278 296" stroke="rgba(60,30,10,.10)" stroke-width="1.5" fill="none"/>
+            <path d="M80 316 Q128 308 180 311 Q232 314 268 320" stroke="rgba(60,30,10,.08)" stroke-width="1.5" fill="none"/>
+            <path d="M130 110 Q120 200 118 330 Q120 370 130 390" stroke="rgba(60,30,10,.09)" stroke-width="1" fill="none"/>
+            <path d="M190 104 Q200 200 202 335 Q200 372 192 394" stroke="rgba(60,30,10,.07)" stroke-width="1" fill="none"/>
+            <ellipse cx="170" cy="250" rx="128" ry="148" fill="url(#cs2)"/>
+            <ellipse cx="170" cy="360" rx="100" ry="50" fill="rgba(40,20,8,.25)"/>
+            <ellipse cx="170" cy="102" rx="28" ry="10" fill="#c4956a" stroke="#8b5e3c" stroke-width="2"/>
+            <ellipse cx="170" cy="100" rx="22" ry="7" fill="#d4a574"/>
+            <rect x="148" y="92" width="44" height="16" rx="8" fill="#e8c8a0" stroke="#a07040" stroke-width="1.5"/>
+            <text x="170" y="104" text-anchor="middle" font-family="serif" font-size="9" fill="#5a3520" letter-spacing="3">NIU</text>
+            <ellipse cx="170" cy="102" rx="6" ry="3" fill="#8b5e3c"/>
+            <ellipse cx="170" cy="101" rx="4" ry="2" fill="#d4a574"/>
+            <ellipse cx="108" cy="108" rx="10" ry="7" fill="none" stroke="#c4956a" stroke-width="3"/>
+            <ellipse cx="108" cy="107" rx="7" ry="4.5" fill="#d4a574"/>
+            <ellipse cx="232" cy="108" rx="10" ry="7" fill="none" stroke="#c4956a" stroke-width="3"/>
+            <ellipse cx="232" cy="107" rx="7" ry="4.5" fill="#d4a574"/>
+          </svg>
+        </div>
+        <div class="gallery-thumbs">
+          <div class="thumb active">
+            <svg viewBox="0 0 100 100"><ellipse cx="50" cy="60" rx="38" ry="42" fill="#8b5e3c"/><ellipse cx="50" cy="60" rx="38" ry="42" fill="rgba(255,200,140,.15)"/></svg>
+          </div>
+          <div class="thumb">
+            <svg viewBox="0 0 100 100"><ellipse cx="50" cy="55" rx="36" ry="40" fill="#7a4e30" transform="rotate(8,50,55)"/><ellipse cx="50" cy="55" rx="36" ry="40" fill="rgba(255,190,130,.12)" transform="rotate(8,50,55)"/></svg>
+          </div>
+          <div class="thumb">
+            <svg viewBox="0 0 100 100"><ellipse cx="50" cy="56" rx="34" ry="38" fill="#6b3f22"/><ellipse cx="50" cy="56" rx="34" ry="38" fill="rgba(255,180,120,.1)"/><ellipse cx="35" cy="40" rx="10" ry="14" fill="rgba(200,150,90,.3)"/></svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Info -->
+      <div class="product-info">
+        <div class="product-badge">
+          <span class="badge-dot"></span>
+          Disponible ahora
+        </div>
+        <h3 class="product-name">NIU <em>Clutch</em></h3>
+        <p class="product-subtitle">Bolso de mano · Coco artesanal</p>
+        <p class="product-desc">
+          Tallada directamente de la cáscara del coco, cada bolsa NIU es una obra única. Pulida a mano, lacada con resina natural e interior revestido en seda orgánica. Diseño tropical, lujo atemporal.
+        </p>
+        <div class="product-specs">
+          <div class="spec-item">
+            <div class="spec-label">Material</div>
+            <div class="spec-value">Coco natural</div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-label">Interior</div>
+            <div class="spec-value">Seda orgánica</div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-label">Cadena</div>
+            <div class="spec-value">materiales organicos</div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-label">Piezas</div>
+            <div class="spec-value">Edición 50 uds</div>
+          </div>
+        </div>
+          <div>
+          </div>
+          <div>
+            <div class="price-note" style="text-align:right">Tono</div>
+            <div class="color-options">
+              <div class="color-dot active" style="background:#8b5e3c"  title="Natural"></div>
+              <div class="color-dot" style="background:#6b3f22"  title="Oscuro"></div>
+              <div class="color-dot" style="background:#c4956a"  title="Claro"></div>
+            </div>
+          </div>
+        </div>
+        <button class="add-to-bag" id="addToBag">
+          <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6" stroke-linecap="round"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          Agregar al carrito
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ HISTORIA ══ -->
+  <section class="story-section" id="story">
+    <div class="story-grid">
+      <div class="story-text">
+        <p class="section-label reveal">Nuestra Historia</p>
+        <h2 class="section-title reveal">Nacido del<br><em>océano.</em></h2>
+        <p class="story-body reveal">
+          NIU —coco en hawaiiano— nació de la unión entre el mar y la tierra. Nuestras artesanas recogen cada coco en las costas de Maui, donde la sal del Pacífico y el calor tropical fusionan la cáscara con una textura inigualable.<br><br>
+          Cada pieza requiere más de cuarenta horas de trabajo a mano: corte, pulido, lacado y ensamblado. No existen dos bolsas iguales. La naturaleza diseña; nosotros damos forma.
+        </p>
+      </div>
+      <div class="story-stats">
+        <div class="stat-item reveal">
+          <div class="stat-num">2+</div>
+          <div class="stat-label">Horas de trabajo por pieza</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-num">100%</div>
+          <div class="stat-label">Material natural sostenible</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-num">50</div>
+          <div class="stat-label">Piezas por colección</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ ARTESANÍA ══ -->
+  <section class="features-section" id="craftsmanship">
+    <p class="section-label reveal">Artesanía</p>
+    <h2 class="section-title reveal">Por qué <em>NIU</em><br>es diferente.</h2>
+    <div class="features-grid">
+      <div class="feature-card reveal">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="feature-title">Material Único</div>
+        <p class="feature-desc">La cáscara del coco ofrece una dureza y textura imposibles de replicar con materiales sintéticos. Cada veta es la huella de la naturaleza.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <div class="feature-title">6 Horas a Mano</div>
+        <p class="feature-desc">Corte artesanal, pulido en seco y húmedo en cinco etapas, lacado con resina natural e instalación de herrajes de oro. Proceso sin apresuramiento.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        </div>
+        <div class="feature-title">Alma Tica</div>
+        <p class="feature-desc">Cada bolsa lleva grabado su número de edición y el nombre de la artesana que la creó. Una conexión real entre creadores y portador@.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ══ -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-brand-icon">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="16" cy="19" rx="10" ry="11" fill="#c4956a"/>
+            <path d="M9 13 Q12 8 16 7 Q20 8 23 13" stroke="rgba(60,30,10,.3)" stroke-width="1" fill="none"/>
+            <path d="M7 18 Q11 16 16 17 Q21 16 25 18" stroke="rgba(60,30,10,.2)" stroke-width="1" fill="none"/>
+            <ellipse cx="16" cy="8" rx="5" ry="3" fill="#5a8c3c"/>
+            <path d="M16 8 Q22 3 28 6" stroke="#4a7830" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+            <path d="M16 8 Q10 2 5 5" stroke="#4a7830" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div>
+          <div class="footer-logo">N<em>I</em>U</div>
+          <div class="footer-tagline">"Un coco a la vez salva el mundo"</div>
+        </div>
+      </div>
+
+      <ul class="footer-links">
+        <li><a href="#product">Colección</a></li>
+        <li><a href="#story">Historia</a></li>
+        <li><a href="#craftsmanship">Artesanía</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+
+      <div class="footer-socials">
+        <a href="#" class="footer-social-btn" aria-label="Instagram">
+          <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="#" class="footer-social-btn" aria-label="TikTok">
+          <svg viewBox="0 0 24 24"><path d="M9 12a4 4 0 104 4V4a5 5 0 005 5"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">NiuCompany© · Handcrafted in Belen, CR</p>
+      <ul class="footer-legal">
+        <li><a href="#">Términos y condiciones</a></li>
+        <li><a href="#">Privacidad</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- TOAST -->
+  <div id="toast" style="
+    position:fixed; bottom:32px; left:50%; transform:translateX(-50%) translateY(80px);
+    background:var(--bark); color:var(--cream); font-family:'Jost',sans-serif;
+    font-size:12px; letter-spacing:.14em; padding:14px 28px; border-radius:50px;
+    opacity:0; transition:opacity .4s, transform .4s; z-index:999; white-space:nowrap;
+  ">✓ Agregado al carrito</div>
+
+  <script src="catalogo.js"></script>
+</body>
+</html>
