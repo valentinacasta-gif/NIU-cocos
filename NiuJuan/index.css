@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Nunito:wght@400;600;700&display=swap');
+
+:root {
+    --brown: #3B2A20;
+    --teal: #2E6B6E;
+    --green: #6F9944;
+    --text-slate: #5C7A94;
+    --bg: #F6EEF2;
+    --card-bg: #FBF8F6;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+}
+
+body {
+    max-width: 1100px;
+    margin: 0 auto;
+    font-family: 'Nunito', sans-serif;
+    color: var(--text-slate);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* shared heading font */
+main > h2,
+.card-texto h2,
+.beneficio-texto h2,
+.card h1,
+footer h3 {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ---------- NAV ---------- */
+
+nav {
+    background: var(--brown);
+    padding: 14px 20px;
+}
+
+nav .seccion {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+nav .seccion > img {
+    height: 32px;
+    width: auto;
+    margin-right: auto;
+}
+
+.iconos-nav {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.iconos-nav img,
+.iconos-footer img {
+    height: 36px;
+    width: 36px;
+    object-fit: contain;
+}
+
+/* ---------- MAIN LAYOUT ---------- */
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 20px;
+}
+
+main > img:first-child {
+    width: min(55%, 220px);
+    margin: 0 auto 30px;
+}
+
+.seccion {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    width: 100%;
+    margin: 10px 0 30px;
+}
+
+/* ---------- COCO CARDS ---------- */
+
+.card {
+    flex: 1 1 46%;
+    background: var(--card-bg);
+    border: 3px solid var(--brown);
+    border-radius: 6px;
+    padding: 10px;
+    text-align: left;
+}
+
+.card h1 {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 8px;
+    line-height: 1.2;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+/* ---------- PALMERAS ---------- */
+
+.palmera {
+    width: 100%;
+    max-width: 1000px;
+    margin: 10px auto 30px;
+    opacity: 0.85;
+}
+
+.palmera img {
+    width: 100%;
+}
+
+/* ---------- NUESTRO OBJETIVO ---------- */
+
+main > h2 {
+    color: var(--green);
+    font-size: 1.4rem;
+    font-weight: 800;
+    text-align: center;
+    width: 100%;
+    margin: -10px 0 20px;
+}
+
+main > h2::before,
+main > h2::after {
+    content: "🥥";
+    margin: 0 10px;
+}
+
+/* ---------- VISION / MISION (texto + imagen horizontal) ---------- */
+
+.card-texto {
+    flex: 1 1 55%;
+}
+
+.card-texto h2 {
+    color: var(--green);
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0 0 10px;
+}
+
+.card-texto p {
+    font-size: 0.82rem;
+    line-height: 1.55;
+    margin: 0;
+}
+
+.foto-lateral {
+    flex: 0 1 auto;
+    width: min(38%, 380px);
+    border: 3px solid var(--brown);
+    border-radius: 6px;
+}
+
+/* globe icon next to Misión (image sits right before the text block) */
+.seccion > .foto-lateral + .card-texto h2::after {
+    content: " 🌎";
+}
+
+/* ---------- BENEFICIOS SOSTENIBLES: imagen | texto centrado | imagen ---------- */
+
+.foto-beneficio {
+    flex: 0 1 auto;
+    width: min(26%, 130px);
+    border-radius: 8px;
+    align-self: center;
+}
+
+.beneficio-texto {
+    flex: 1 1 40%;
+    text-align: center;
+}
+
+.beneficio-texto h2 {
+    color: var(--green);
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin: 0 0 12px;
+}
+
+.beneficio-texto p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ---------- FOOTER ---------- */
+
+footer {
+    background: var(--brown);
+    padding: 18px 20px;
+}
+
+footer .seccion {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 14px;
+}
+
+footer h3 {
+    color: #9BC17C;
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.iconos-footer {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-left: auto;
+}
+
+/* ---------- SMALL SCREENS ---------- */
+
+@media (max-width: 380px) {
+    .seccion {
+        flex-direction: column;
+    }
+
+    .card,
+    .card-texto,
+    .foto-lateral {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+
+    .beneficio-texto {
+        order: 1;
+        flex: 1 1 100%;
+    }
+
+    .foto-beneficio {
+        order: 2;
+        width: 46%;
+    }
+}
+
+/* ---------- TABLET ---------- */
+
+@media (min-width: 600px) {
+    nav {
+        padding: 18px 36px;
+    }
+
+    nav .seccion > img {
+        height: 38px;
+    }
+
+    .iconos-nav img,
+    .iconos-footer img {
+        height: 28px;
+        width: 28px;
+    }
+
+    .iconos-nav {
+        gap: 20px;
+    }
+
+    main {
+        padding: 40px 36px;
+    }
+
+    main > img:first-child {
+        width: min(45%, 260px);
+        margin-bottom: 40px;
+    }
+
+    .seccion {
+        gap: 26px;
+        margin-bottom: 40px;
+    }
+
+    main > h2 {
+        font-size: 1.7rem;
+        margin-bottom: 28px;
+    }
+
+    .card-texto h2 {
+        font-size: 1.5rem;
+    }
+
+    .beneficio-texto h2 {
+        font-size: 1.6rem;
+    }
+
+    .card-texto p,
+    .card h1 {
+        font-size: 0.9rem;
+    }
+
+    .beneficio-texto p {
+        font-size: 1.1rem;
+    }
+
+    .foto-beneficio {
+        width: min(24%, 150px);
+    }
+
+    footer {
+        padding: 24px 36px;
+    }
+
+    footer h3 {
+        font-size: 0.85rem;
+    }
+}
+
+/* ---------- DESKTOP ---------- */
+
+@media (min-width: 960px) {
+    nav {
+        padding: 20px 60px;
+    }
+
+    nav .seccion > img {
+        height: 44px;
+    }
+
+    .iconos-nav img,
+    .iconos-footer img {
+        height: 30px;
+        width: 30px;
+    }
+
+    .iconos-nav {
+        gap: 26px;
+    }
+
+    main {
+        padding: 56px 60px;
+    }
+
+    main > img:first-child {
+        width: min(35%, 300px);
+        margin-bottom: 50px;
+    }
+
+    .seccion {
+        gap: 40px;
+        margin-bottom: 50px;
+    }
+
+    main > h2 {
+        font-size: 2rem;
+        margin-bottom: 34px;
+    }
+
+    .card-texto h2 {
+        font-size: 1.7rem;
+    }
+
+    .beneficio-texto h2 {
+        font-size: 1.9rem;
+    }
+
+    .card-texto p {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .beneficio-texto p {
+        font-size: 1.25rem;
+        line-height: 1.7;
+    }
+
+    .card h1 {
+        font-size: 1rem;
+    }
+
+    .foto-beneficio {
+        width: min(20%, 170px);
+    }
+
+    footer {
+        padding: 28px 60px;
+    }
+
+    footer h3 {
+        font-size: 0.95rem;
+    }
+}
