@@ -1,7 +1,3 @@
-/* ============================================================
-   NIU — Handcrafted Coconut Bags
-   main.js
-   ============================================================ */
 
 // ── CUSTOM CURSOR ──
 const cursor = document.getElementById('cursor');
