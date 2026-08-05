@@ -516,4 +516,6 @@ nav.scrolled { height: 54px; box-shadow: 0 4px 24px rgba(61,43,31,.1); }
   background: var(--foam);
   margin: 0 4px;
 }
-
+.LogoCompleto {
+  padding: 20px;
+}
