@@ -79,3 +79,9 @@ document.addEventListener('mousemove', e => {
   const y = (e.clientY / window.innerHeight - .5) * 10;
   bgText.style.transform = `translate(${x}px, ${y}px)`;
 });
+
+function irAPagina(url) {
+    if (url) {
+        window.location.href = url;
+    }
+}

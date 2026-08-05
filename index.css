@@ -7,6 +7,14 @@
     --text-slate: #5C7A94;
     --bg: #F6EEF2;
     --card-bg: #FBF8F6;
+      --sand:    #f5efe6;
+  --cream:   #faf7f2;
+  --bark:    #3d2b1f;
+  --husk:    #8b6348;
+  --shell:   #c4a882;
+  --foam:    #e8ddd0;
+  --ink:     #1a1108;
+  --accent:  #b8865a;
 }
 
 * {
@@ -40,37 +48,8 @@ footer h3 {
     font-family: 'Poppins', sans-serif;
 }
 
-/* ---------- NAV ---------- */
 
-nav {
-    background: var(--brown);
-    padding: 14px 20px;
-}
 
-nav .seccion {
-    display: flex;
-    align-items: center;
-    width: 100%;
-}
-
-nav .seccion > img {
-    height: 32px;
-    width: auto;
-    margin-right: auto;
-}
-
-.iconos-nav {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-}
-
-.iconos-nav img,
-.iconos-footer img {
-    height: 36px;
-    width: 36px;
-    object-fit: contain;
-}
 
 /* ---------- MAIN LAYOUT ---------- */
 
@@ -407,3 +386,134 @@ footer h3 {
         font-size: 0.95rem;
     }
 }
+.cursor {
+  position: fixed;
+  width: 12px; height: 12px;
+  background: var(--bark);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform .15s ease, width .25s ease, height .25s ease, background .25s ease;
+}
+.cursor-ring {
+  position: fixed;
+  width: 36px; height: 36px;
+  border: 1px solid var(--husk);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: transform .4s ease, width .3s ease, height .3s ease;
+}
+body:has(a:hover) .cursor,
+body:has(button:hover) .cursor { width: 6px; height: 6px; background: var(--accent); }
+body:has(a:hover) .cursor-ring,
+body:has(button:hover) .cursor-ring { width: 52px; height: 52px; border-color: var(--accent); }
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  height: 68px;
+  background: rgba(250,247,242,.92);
+  backdrop-filter: blur(20px) saturate(1.4);
+  -webkit-backdrop-filter: blur(20px) saturate(1.4);
+  border-bottom: 2px solid var(--accent);
+  transition: height .4s ease, box-shadow .4s;
+}
+nav.scrolled { height: 54px; box-shadow: 0 4px 24px rgba(61,43,31,.1); }
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+.nav-logo-icon {
+  width: 40px; height: 40px;
+  border-radius: 10px;
+  background: var(--bark);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  transition: background .3s;
+}
+.nav-logo:hover .nav-logo-icon { background: var(--accent); }
+.nav-logo-icon svg { width: 24px; }
+.nav-logo-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: .18em;
+  color: var(--bark);
+  line-height: 1;
+}
+.nav-logo-text em { font-style: italic; color: var(--accent); }
+
+.nav-links {
+  display: flex;
+  gap: 36px;
+  list-style: none;
+  position: absolute;
+  left: 50%; transform: translateX(-50%);
+}
+.nav-links a {
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--husk);
+  text-decoration: none;
+  position: relative;
+}
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -3px; left: 0;
+  width: 0; height: 1px;
+  background: var(--accent);
+  transition: width .35s ease;
+}
+.nav-links a:hover::after { width: 100%; }
+.nav-links a:hover { color: var(--bark); }
+
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.nav-icon-btn {
+  width: 36px; height: 36px;
+  border: none;
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  background: transparent;
+  cursor: none;
+  transition: background .25s;
+  position: relative;
+}
+.nav-icon-btn:hover { background: var(--foam); }
+.nav-icon-btn svg { width: 18px; height: 18px; }
+.nav-icon-btn svg path,
+.nav-icon-btn svg circle,
+.nav-icon-btn svg rect,
+.nav-icon-btn svg line { stroke: var(--husk); fill: none; stroke-width: 1.6; transition: stroke .25s; }
+.nav-icon-btn:hover svg path,
+.nav-icon-btn:hover svg circle { stroke: var(--bark); }
+.nav-icon-btn .badge {
+  position: absolute;
+  top: 4px; right: 4px;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 1.5px solid var(--cream);
+}
+.nav-divider {
+  width: 1px; height: 20px;
+  background: var(--foam);
+  margin: 0 4px;
+}
+

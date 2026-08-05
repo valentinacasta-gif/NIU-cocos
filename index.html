@@ -3,9 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Niu</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="icon" href="./Imagenes/Coco-Logo.png" type="image/png">
 </head>
 <body>
-    
+
+  <!-- CUSTOM CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ══ NAV ══ -->
+  <nav id="nav">
+    <a href="#" class="nav-logo">
+      <div class="nav-logo-icon">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="16" cy="19" rx="10" ry="11" fill="#c4956a"/>
+          <ellipse cx="16" cy="19" rx="10" ry="11" fill="url(#ng1)"/>
+          <path d="M9 13 Q12 8 16 7 Q20 8 23 13" stroke="rgba(60,30,10,.3)" stroke-width="1" fill="none"/>
+          <path d="M7 18 Q11 16 16 17 Q21 16 25 18" stroke="rgba(60,30,10,.2)" stroke-width="1" fill="none"/>
+          <ellipse cx="16" cy="8" rx="5" ry="3" fill="#5a8c3c"/>
+          <path d="M16 8 Q22 3 28 6" stroke="#4a7830" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <path d="M16 8 Q10 2 5 5" stroke="#4a7830" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <defs>
+            <radialGradient id="ng1" cx="35%" cy="35%" r="60%">
+              <stop offset="0%" stop-color="rgba(255,200,140,.4)"/>
+              <stop offset="100%" stop-color="rgba(60,30,10,.25)"/>
+            </radialGradient>
+          </defs>
+        </svg>
+      </div>
+      <div>
+        <div class="nav-logo-text">N<em>I</em>U</div>
+      </div>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#product">Colección</a></li>
+      <li><a href="#story">Nuestra Historia</a></li>
+      <li><a href="#craftsmanship">Artesanía</a></li>
+    </ul>
+
+    <div class="nav-icons">
+      <button class="nav-icon-btn" aria-label="Mi cuenta" onclick="irAPagina('./index.html')">
+        <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </button>
+      <button class="nav-icon-btn" aria-label="Comunidad" onclick="irAPagina('./NiuUran/nosotros.html')">
+        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+      </button>
+      <div class="nav-divider"></div>
+      <button class="nav-icon-btn" aria-label="Carrito" id="navCart" onclick="irAPagina('./NiuCasta/catalogo.html')">
+        <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        <span class="badge" style="display:none"></span>
+      </button>
+    </div>
+  </nav>
+
+<main>
+<!-- Imagen del logo de Niu -->
+<img src="./Imagenes/LogoCompleto.PNG" alt="">
+<!-- Las secciones seran espacio horizontales donde todo lo que este dentro
+ sera agrupado en  esa parte, evitando que se ponga uno encima de otro-->
+<div class="seccion">
+<!-- Primera card con coco y un titulo -->
+    <div class="card"> 
+        <h1>Coco Floreciente - LIMITADO</h1>
+        <img src="./Imagenes/Coco-Floreciente.PNG" alt="">
+    </div>
+<!-- Segunda card con coco y un titulo -->
+    <div class="card"> 
+        <h1>Coco Naciente - POPULAR</h1>
+        <img src="./Imagenes/Coco-Naciente.PNG" alt="">
+    </div>
+</div>
+
+<!-- Linea de palmeras -->
+ <div class="palmera">
+ <img src="./Imagenes/Palmeras.PNG" alt="">
+</div>
+ <h2>Nuestro Objetivo</h2>
+
+<div class="seccion">
+    <div class="card-texto">
+    <h2>Visión</h2>
+    <p>La visión de NIU para el futuro es transformar la industria hacia un 
+        modelo más sostenible. Queremos que nuestra presencia en el mercado mundial 
+        presione a la industria a abandonar una producción contaminante que impulsa el 
+        consumismo, por un modelo donde la prioridad sea la sostenibilidad, la calidad 
+        y el impacto ambiental positivo.</p>
+    </div>
+    <!-- Linea que separa-->
+     <!-- Imagen de dos manos sosteniendo una planta-->
+      <img src="./Imagenes/Manos-con-planta.PNG" alt="" class="foto-lateral">
+ </div>
+ <div class="seccion">
+    <!-- Imagen de ropa reciclable-->
+     <img src="./Imagenes/Ropa-Reciclable.PNG" alt="" class="foto-lateral">
+     <!-- Linea separadora-->
+    <div class="card-texto">
+    <h2>Mision</h2>
+    <p>Nuestra misión actualmente es generar conciencia en los consumidores sobre las
+         afectaciones que produce la cultura de la moda. Esto mediante el desarrollo
+          de productos no contaminantes, para crear reflexión sobre el hecho de que la
+           calidad no debe estar regida por procesos contaminantes ni por la explotación
+            de recursos naturales.</p>
+    </div>
+ </div>
+ <!-- Linea de palmeras -->
+  <div class="palmera">
+ <img src="./Imagenes/Palmeras.PNG" alt="">
+</div>
+<div class="seccion">
+    <img src="./Imagenes/Lado1.PNG" alt="" class="foto-beneficio">
+    <div class="beneficio-texto">
+        <h2>Beneficio sostenibles</h2>
+        <p>Nuestro proyecto está elaborado con coco, material que ofrece varios beneficios
+             importantes para el medio ambiente. Por ejemplo, reduce la acumulación de desechos
+              agrícolas; además, nuestros productos no solo no son contaminantes, sino que se
+               descomponen de forma natural con el tiempo. Otro beneficio es que no requiere
+               procesos industriales contaminantes para su elaboración y, a diferencia de los
+                materiales derivados del petróleo, no se agota. Contribuiremos a reducir la contaminación,
+                 aprovechar recursos naturales y promover un estilo de vida más sostenible, mediante la
+                  recolección y el uso controlado de cocos, evitando afectaciones al entorno natural.</p>
+    </div>
+    <img src="./Imagenes/Lado2.PNG" alt="" class="foto-beneficio">
+</div>
+ <!-- Linea de palmeras -->
+<div class="palmera">
+ <img src="./Imagenes/Palmeras.PNG" alt="">
+</div>
+
+</main>
+
+<footer>
+<div class="seccion">
+<h3>NiuCompany©</h3>
+<h3>Términos y condiciones</h3>
+<!-- Grupo de iconos del footer-->
+<div class="iconos-footer">
+<img src="./Imagenes/Instagram.png" alt="">
+<img src="./Imagenes/Tiktok.png" alt="">
+</div>
+</div>
+</footer>
 </body>
+<script src="./NiuCasta/js/catalogo.js"></script>
 </html>

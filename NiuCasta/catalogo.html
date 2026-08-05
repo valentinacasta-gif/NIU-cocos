@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../css/catalogo.css" />
+  <link rel="stylesheet" href="./catalogo.css" />
 </head>
 <body>
 
@@ -47,14 +47,14 @@
     </ul>
 
     <div class="nav-icons">
-      <button class="nav-icon-btn" aria-label="Mi cuenta">
+      <button class="nav-icon-btn" aria-label="Mi cuenta" onclick="irAPagina('../index.html')">
         <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
       </button>
-      <button class="nav-icon-btn" aria-label="Comunidad">
+      <button class="nav-icon-btn" aria-label="Comunidad" onclick="irAPagina('../NiuUran/nosotros.html')">
         <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
       </button>
       <div class="nav-divider"></div>
-      <button class="nav-icon-btn" aria-label="Carrito" id="navCart">
+      <button class="nav-icon-btn" aria-label="Carrito" id="navCart" onclick="irAPagina('../NiuCasta/catalogo.html')">
         <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
         <span class="badge" style="display:none"></span>
       </button>
@@ -401,6 +401,6 @@
     opacity:0; transition:opacity .4s, transform .4s; z-index:999; white-space:nowrap;
   ">✓ Agregado al carrito</div>
 
-  <script src="../js/catalogo.js"></script>
+  <script src="./js/catalogo.js"></script>
 </body>
 </html>
