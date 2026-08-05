@@ -84,4 +84,29 @@ function irAPagina(url) {
     if (url) {
         window.location.href = url;
     }
+};
+
+function sendMail() {
+ 
+    let params = {
+        name: document.getElementById("nombre").value,
+        title: document.getElementById("correo").value,
+        message: document.getElementById("comentario").value
+    };
+ 
+    console.log("Datos enviados:", params);
+ 
+    emailjs.send(
+        "service_89w6w4p",
+        "template_5hs6tsz",
+        params
+    )
+    .then(function (response) {
+        console.log("Éxito:", response);
+        alert("Comentario enviado correctamente.");
+    })
+    .catch(function (error) {
+        console.error("Error completo:", error);
+        alert("Error: " + error.text);
+    });
 }
