@@ -217,6 +217,8 @@ footer h3 {
     margin-left: auto;
 }
 
+
+
 /* ---------- SMALL SCREENS ---------- */
 
 @media (max-width: 380px) {
@@ -309,6 +311,15 @@ footer h3 {
 
     footer h3 {
         font-size: 0.85rem;
+    }
+
+    .contacto {
+        max-width: 560px;
+        padding: 32px 40px;
+    }
+
+    .contacto-sub {
+        font-size: 0.95rem;
     }
 }
 
@@ -518,4 +529,109 @@ nav.scrolled { height: 54px; box-shadow: 0 4px 24px rgba(61,43,31,.1); }
 }
 .LogoCompleto {
   padding: 20px;
+}
+
+/* ---------- CONTACTANOS ---------- */
+
+.contacto {
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto 10px;
+    padding: 30px 24px 26px;
+    background: var(--cream);
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 12px 30px rgba(61, 43, 31, .1);
+    overflow: hidden;
+}
+
+.contacto::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--green), var(--accent), var(--teal));
+}
+
+.contacto-sub {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin: 0 0 22px;
+}
+
+.contacto-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.campo {
+    position: relative;
+    text-align: left;
+}
+
+.campo::before {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    font-size: 0.95rem;
+    line-height: 1;
+    pointer-events: none;
+}
+
+
+
+.contacto-form input,
+.contacto-form textarea {
+    width: 100%;
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.9rem;
+    color: var(--brown);
+    background: var(--card-bg);
+    border: 2px solid var(--shell);
+    border-radius: 8px;
+    padding: 10px 12px 10px 36px;
+    transition: border-color .25s, box-shadow .25s, background .25s;
+}
+
+.contacto-form input::placeholder,
+.contacto-form textarea::placeholder {
+    color: var(--husk);
+}
+
+.contacto-form input:focus,
+.contacto-form textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(184, 134, 90, .2);
+}
+
+.contacto-form textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+.contacto-form button {
+    align-self: center;
+    margin-top: 6px;
+    padding: 11px 36px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: .04em;
+    color: var(--cream);
+    background: var(--brown);
+    border: none;
+    border-radius: 999px;
+    cursor: none;
+    box-shadow: 0 6px 16px rgba(61, 43, 31, .25);
+    transition: background .25s, transform .2s, box-shadow .25s;
+}
+
+.contacto-form button:hover {
+    background: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(184, 134, 90, .3);
 }

@@ -154,12 +154,22 @@
     <div class="palmera">
       <img src="./Imagenes/Palmeras.PNG" alt="">
     </div>
-    <div>
-      <h1>Contactanos!</h1>
-      <input type="text" id="nombre" placeholder="Su nombre">
-      <input type="email" id="correo" placeholder="Su correo">
-      <textarea id="comentario" placeholder="Su comentario"></textarea>
-      <button onclick="sendMail()">Enviar</button>
+    <h2>Contáctanos</h2>
+
+    <div class="contacto">
+      <p class="contacto-sub">¿Tienes dudas o comentarios? Escríbenos y te responderemos pronto.</p>
+      <form class="contacto-form" onsubmit="return false;">
+        <div class="campo campo-nombre">
+          <input type="text" id="nombre" placeholder="Su nombre">
+        </div>
+        <div class="campo campo-correo">
+          <input type="email" id="correo" placeholder="Su correo">
+        </div>
+        <div class="campo campo-comentario">
+          <textarea id="comentario" placeholder="Su comentario" rows="4"></textarea>
+        </div>
+        <button type="button" onclick="sendMail()">Enviar</button>
+      </form>
     </div>
 
   </main>
